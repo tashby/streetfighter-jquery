@@ -1,36 +1,22 @@
-$(document).ready(function() {
-	var contacts = [];
-    var person = info;
-
-    function info(Name, address, phone) {
-        this.Name = Name;
-        this.address = address;
-        this.phone = phone;
-    }
-
-});
+//$(document).ready(function() {
+var list = [];
+//});
 
 //Create object that stores all values. Loop through array and show values.
-$("#contact_form").submit(function(e){
-e.preventDefault();
-var formData = {
-	name: e.target.name.value,
-	address: e.target.address,
-	phone: e.target.phone,
-}
-
+$("#contact").on('submit',function(e) {
+    e.preventDefault();
+    var contact = {
+        name: e.target.name.value,
+        address: e.target.address.value,
+        phone: e.target.phone.value,
+    };
+    list.push(contact);
+    display();
 });
 
-
-
-var printPerson = function(person) {
-    console.log(person.Name+" "+person.address + " " + person.phone);
-};
-
-var list = function() {
-    var contactsLength = [];
-    for (i = 0; i < contacts.length; i++) {
-        printPerson(contacts[i])
-    };
-
+function display() {
+    for (var i = 0; i < list.length; i++) {
+        console.log(i);
+        //$("#contactList").append(list[i]);
+    }
 };

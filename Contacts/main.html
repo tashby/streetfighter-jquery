@@ -10,7 +10,7 @@ div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
 </script>
 </head>
 <body>
-<form id="contact_form" >
+<form id="contact" method="post">
 	<div class="row">
 		<label for="name">Your name:</label><br />
 		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
@@ -20,10 +20,15 @@ div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
 		<input id="address" class="address" name="adress" type="text" value="" size="30" /><br />
 	</div>
 	<div class="row">
-		<label for="phone">Your Number:</label><br />
-		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+		<label for="address">Your phone number:</label><br />
+		<input id="phone" class="phone" name="phone" type="text" value="" size="30" /><br />
 	</div>
-	<input id="submit_button" type="submit" value="Send email" />
+	<button id="submit_button" type="submit" >Click to run</button>
+
+	<div class="contactList">
+</div>
 </form>					
+
+
 </body>
 </html>
